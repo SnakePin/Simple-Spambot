@@ -21,6 +21,7 @@ namespace WindowsFormsApp2
         bool usecliplib = false;
         bool discordEdtLastmsg = false;
         int animvar1;
+        int var2 = 0;
 
         private static Random random = new Random();
         public static string RandomString(int length)
@@ -35,6 +36,7 @@ namespace WindowsFormsApp2
             spamtext = textBox1.Text;
             spamtext = spamtext.Replace("{TIME}", DateTime.Now.ToString("HH:mm:ss"));
             spamtext = spamtext.Replace("{RANDOM}", RandomString(10));
+            spamtext = spamtext.Replace("{INCVAR2}", (var2++).ToString());
             switch (animvar1)
             {
                 case 0:
